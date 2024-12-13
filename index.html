@@ -1,1 +1,121 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUAL BELI GAMING</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-container" class="fade-in">
+        <div class="login-header">
+            <h2>Welcome To The Store</h2>
+        </div>
+        <form id="login-form" onsubmit="handleLogin(event)">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Masukkan username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Masukkan password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p id="login-error" style="color: red; display: none;">That password was incorrect. Please try again.</p>
+        <div class="login-footer">
+        </div>
+    </div>    
+    <main id="app-container" class="fade-out" style="display: none;">
+        <header>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="#" onclick="showProducts()">Product</a></li>
+                    <li><a href="#" onclick="openCart()">Cart</a></li>
+                    <li><a href="#" onclick="openCustomerList()">Customer List</a></li>
+                    <li><a href="#" onclick="logout()">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="product-section">
+                <h2>Product List</h2>
+                <div class="product-list">
+                    <!-- RGX Carambit -->
+                    <div class="product">
+                        <img src="https://i.pinimg.com/736x/3b/06/c2/3b06c27b8fe8640cc72b4256c388481c.jpg" alt="RGX Carambit" class="product-image">
+                        <h3>RGX Carambit</h3>
+                        <p>Price: Rp 500,000</p>
+                        <button onclick="addToCart('RGX Carambit', 500000)">Add</button>
+                    </div>
+                    <!-- Reaver Carambit -->
+                    <div class="product">
+                        <img src="https://i.pinimg.com/736x/a5/9d/25/a59d25c0178af54a3cdcf1735eea8a8f.jpg" alt="Reaver Carambit" class="product-image">
+                        <h3>Reaver Carambit</h3>
+                        <p>Price: Rp 550,000</p>
+                        <button onclick="addToCart('Reaver Carambit', 550000)">Add</button>
+                    </div>
+                    <!-- Kuronami No Yaiba -->
+                    <div class="product">
+                        <img src="https://i.pinimg.com/736x/78/c3/35/78c335a6cfb9b0fac562ee07ae012d38.jpg" alt="Kuronami No Yaiba" class="product-image">
+                        <h3>Kuronami No Yaiba</h3>
+                        <p>Price: Rp 700,000</p>
+                        <button onclick="addToCart('Kuronami No Yaiba', 700000)">Add</button>
+                    </div>
+                    <!-- Ruination Sword -->
+                    <div class="product">
+                        <img src="https://i.pinimg.com/736x/4c/be/23/4cbe2399e9be9dc24c94a0461d7e6d9e.jpg" alt="Ruination Sword" class="product-image">
+                        <h3>Ruination Sword</h3>
+                        <p>Price: Rp 750,000</p>
+                        <button onclick="addToCart('Ruination Sword', 750000)">Add</button>
+                    <!-- Jett Knife -->
+                    <div class="product">
+                        <img src="https://i.pinimg.com/736x/2d/71/c8/2d71c8243791d8e43228272ce656aa36.jpg" alt="Jett Knife" class="product-image">
+                        <h3>Jett Knife</h3>
+                        <p>Price: Rp 650,000</p>
+                        <button onclick="addToCart('Jett Knife', 650000)">Add</button>
+                    <div class="product">
+                        <img src="https://i.pinimg.com/736x/38/18/52/3818521313b0d2553a3cb99be4553440.jpg" alt="SEN Classic" class="product-image">
+                        <h3>SEN Classic</h3>
+                        <p>Price: Rp 250,000</p>
+                        <button onclick="addToCart('SEN Classic', 250000)">Add</button>
+                    <div class="product">
+                        <img src="https://i.pinimg.com/736x/17/16/58/1716586008994bd66a53edb1143184ca.jpg" alt="Arcane Sherrif" class="product-image">
+                        <h3>Arcane Sherrif</h3>
+                        <p>Price: Rp 350,000</p>
+                        <button onclick="addToCart('Jett Knife', 350000)">Add</button>
+                    </div>
+            <div id="product-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button" onclick="closeProducts()">&times;</span>
+                    <h2>Product List</h2>
+                    <ul id="product-list">
+                        <!-- Produk akan dimasukkan oleh JavaScript -->
+                    </ul>
+                </div>
+            </div>            
+            <div id="cart-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button" onclick="closeCart()">&times;</span>
+                    <h2>Shopping Cart</h2>
+                    <ul id="cart-items-modal"></ul>
+                    <p>Total Price: Rp <span id="cart-total-price">0</span></p>
+                    <button onclick="checkout()">Checkout</button>            
+                </div>
+            </div>            
+            <div id="customer-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button" onclick="closeCustomerList()">&times;</span>
+                    <h2>Customer List</h2>
+                    <ul id="customer-list"></ul>
+                </div>            
+                <div class="customer-section">
+                    <h2>Customer List</h2>
+                    <ul id="customer-list"></ul>
+                </div>                
+            </div>            
+        </main>        
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
