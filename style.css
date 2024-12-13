@@ -1,1 +1,372 @@
+/* Body dan Dasar */
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(45deg, #0f0f0f, #1a1a1a);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 
+/* Header */
+header {
+    background: linear-gradient(90deg, #3333FF, #FF33E1);
+    color: #000;
+    padding: 10px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    box-shadow: 0 15px 35px rgba(255, 127, 17, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Login Container */
+#login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px; /* Atur lebar frame */
+    padding: 30px; /* Tambahkan padding untuk ruang di dalam frame */
+    background: rgba(25, 25, 25, 0.95);
+    border: 2px solid #3333FF;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(255, 127, 17, 0.3);
+}
+
+/* Header Login */
+.login-header h2 {
+    margin: 0;
+    font-size: 28px;
+    color: #ffcc00;
+    text-shadow: 0 0 10px #3333FF, 0 0 20px #FFFF33;
+    margin-bottom: 20px; /* Tambahkan jarak bawah header */
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 20px; /* Tambahkan jarak antar input */
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 5px; /* Jarak antara label dan input */
+    text-shadow: 0 0 5px #3333FF;
+}
+
+.input-group input {
+    width: 94%;
+    padding: 10px;
+    border: 1px solid #3333FF;
+    border-radius: 5px;
+    background: #0f0f0f;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    box-shadow: 0 15px 35px rgba(255, 127, 17, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.input-group input:focus {
+    outline: none;
+    box-shadow: 0 15px 35px rgba(255, 127, 17, 0.3);
+}
+
+/* Button */
+#login-container button {
+    background-color: #3333FF;
+    color: #fff;
+    padding: 12px;
+    width: 100%; /* Atur tombol agar sesuai lebar form */
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #FFFF33, 0 0 20px #3333FF;
+    transition: all 0.3s ease-in-out;
+}
+
+#login-container button:hover {
+    background: #FFFF33;
+    color: #000;
+}
+
+/* Footer Login */
+.login-footer {
+    margin-top: 20px; /* Jarak antara tombol dan footer */
+}
+
+.login-footer p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.login-footer a {
+    color: #FFFF33;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.login-footer a:hover {
+    color: #3333FF;
+}
+
+/* Navbar */
+nav {
+    background: rgba(25, 25, 25, 0.9);
+    border-bottom: 2px solid #3333FF;
+    padding: 15px 20px;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #FFFF33;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #FFFF33;
+    letter-spacing: 2px;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.navbar li a:hover {
+    color: #3333FF;
+    text-shadow: 0 0 20px #3333FF, 0 0 40px #FFFF33;
+}
+
+/* Konten */
+main {
+    padding: 20px;
+}
+
+.product-section, .cart-section {
+    background: rgba(25, 25, 25, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(255, 127, 17, 0.3);
+    border: 2px solid #3333FF;
+    margin-bottom: 20px;
+}
+
+.product {
+    background: rgba(40, 40, 40, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #FFFF33;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(255, 127, 17, 0.3);
+}
+
+.product h3 {
+    color: #FFFF33;
+    text-shadow: 0 0 10px #FFFF33;
+}
+
+.product p {
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+button {
+    background-color: #3333FF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #FFFF33;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #FFFF33;
+    color: #000;
+}
+
+/* Gambar Produk */
+.product-image {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 2px solid #3333FF;
+    box-shadow: 0 15px 35px rgba(255, 127, 17, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-image:hover {
+    transform: scale(1.1);
+}
+
+/* Checkout Button */
+#checkout-button {
+    background: #3333FF;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    text-shadow: 0 0 10px #FFFF33;
+    transition: all 0.3s ease-in-out;
+}
+
+#checkout-button:hover {
+    background-color: #FFFF33;
+    color: #000;
+    text-shadow: none;
+}
+
+/* Keranjang Belanja */
+.cart-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-section ul li {
+    padding: 10px;
+    border-bottom: 1px solid #3333FF;
+    color: #fff;
+}
+
+.cart-section ul li:last-child {
+    border-bottom: none;
+}
+
+.cart-section p {
+    margin-top: 10px;
+    color: #3333FF;
+    font-weight: bold;
+}
+
+/* Animasi untuk Login */
+.fade-in {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 8px;
+}
+
+.close-button {
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#product-list img {
+    vertical-align: middle;
+}
+
+#product-list li {
+    margin: 10px 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #000000;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 5px;
+}
+
+.close-button {
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#customer-list {
+    list-style: none;
+    padding: 0;
+}
+
+#customer-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#customer-list li:last-child {
+    border-bottom: none;
+}
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
