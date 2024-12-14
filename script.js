@@ -95,11 +95,13 @@ function handleLogin(event) {
 const products = [
     { name: "RGX Carambit", price: 500000, image: "https://i.pinimg.com/736x/3b/06/c2/3b06c27b8fe8640cc72b4256c388481c.jpg" },
     { name: "Reaver Carambit", price: 550000, image: "https://i.pinimg.com/736x/a5/9d/25/a59d25c0178af54a3cdcf1735eea8a8f.jpg" },
-    { name: "Kuronami No Yaiba", price: 700000, image: "https://i.pinimg.com/736x/78/c3/35/78c335a6cfb9b0fac562ee07ae012d38.jpg" },
+    { name: "Kuronami No Yaiba", price: 700000, image: "https://i.pinimg.com/736x/ea/a1/9f/eaa19fe968667f30cfac3f769069ee82.jpg" },
     { name: "Ruination Sword", price: 750000, image: "https://i.pinimg.com/736x/4c/be/23/4cbe2399e9be9dc24c94a0461d7e6d9e.jpg" },
     { name: "Jett Knife", price: 650000, image: "https://i.pinimg.com/736x/2d/71/c8/2d71c8243791d8e43228272ce656aa36.jpg" },
     { name: "SEN Classic", price: 250000, image: "https://i.pinimg.com/736x/38/18/52/3818521313b0d2553a3cb99be4553440.jpg" },
     { name: "Arcane Sherrif", price: 350000, image: "https://i.pinimg.com/736x/17/16/58/1716586008994bd66a53edb1143184ca.jpg" },
+    { name: "Jinx Boom", price: 150000, image: "https://i.pinimg.com/736x/f5/06/0c/f5060caf555bed882b0a384b47fa7450.jpg" },
+    { name: "Prime Axe", price: 350000, image: "https://i.pinimg.com/736x/13/cb/00/13cb0069e3e2aa37a87304befa7630b0.jpg" },
 ];
 function showProducts() {
     const productList = document.getElementById("product-list");
